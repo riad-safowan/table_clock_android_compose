@@ -78,7 +78,6 @@ fun TimeDisplay() {
     }
 
     if (isPortrait) {
-        // Display the first composable for portrait orientation
         ShowVerticalTime(currentTime.value)
     } else {
         ShowHorizontalTime(currentTime.value)
@@ -92,7 +91,7 @@ fun ShowHorizontalTime(currentTime: String) {
         modifier = Modifier
             .fillMaxSize()
             .background(color = Color.Black)
-            .offset((-10).dp, (-20).dp)
+            .offset((-12).dp, (-20).dp)
 
     ) {
         Text(
@@ -126,7 +125,7 @@ fun ShowVerticalTime(currentTime: String) {
             fontWeight = FontWeight.ExtraBold,
             modifier = Modifier
                 .background(color = Color.Black)
-                .offset((3).dp, (20).dp),
+                .offset((2).dp, (20).dp),
         )
         Text(
             text = minutes,
@@ -135,7 +134,7 @@ fun ShowVerticalTime(currentTime: String) {
             fontWeight = FontWeight.ExtraBold,
             modifier = Modifier
                 .background(color = Color.Black)
-                .offset((3).dp, (-80).dp),
+                .offset((2).dp, (-80).dp),
         )
     }
 }
